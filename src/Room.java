@@ -4,7 +4,7 @@ import java.util.Set;
 public class Room {
     private String description;
     private HashMap<String, Room> exits; // Stores exits like "north" -> Room Object
-    private String item; // A simple item name (can be null if empty)
+    private String item; 
 
     public Room(String description) {
         this.description = description;

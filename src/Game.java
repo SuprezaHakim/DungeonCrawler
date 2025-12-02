@@ -10,31 +10,29 @@ public class Game {
     }
 
     private void createRooms() {
-        Room outside, lobby, lab, office, basement;
+        Room outside, lobby, workShop, office, basement;
 
-        // Create rooms
         outside = new Room("outside the main entrance of the university");
         lobby = new Room("in the grand lobby");
-        lab = new Room("in a computing lab");
+        workShop = new Room("in a computing workshop");
         office = new Room("in the admin office");
         basement = new Room("in the dark basement");
 
-        // Initialize room exits
         outside.setExit("east", lobby);
-        outside.setExit("south", lab);
+        outside.setExit("south", workShop);
         
         lobby.setExit("west", outside);
         lobby.setExit("east", office);
         
-        lab.setExit("north", outside);
-        lab.setExit("east", basement);
+        workShop.setExit("north", outside);
+        workShop.setExit("east", basement);
         
         office.setExit("west", lobby);
         
-        basement.setExit("west", lab);
+        basement.setExit("west", workShop);
 
-        // Add items to rooms
-        lab.setItem("FlashDrive");
+        // Adds  items to rooms
+        workShop.setItem("FlashDrive");
         office.setItem("Key");
         basement.setItem("AncientServer");
 
